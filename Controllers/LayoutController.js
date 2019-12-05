@@ -28,6 +28,9 @@ const layoutHTML =
     var coursesEvent = $(document).on("click","#Courses",(e)=>{
         window.open("Courses.php","_self");
     })
+
+    
+    var tooltippedEvent= $('.tooltipped').tooltip();
  
 
-export {layoutHTML,homeEvent,adminEvent,coursesEvent};
+export {layoutHTML,homeEvent,adminEvent,coursesEvent,tooltippedEvent};

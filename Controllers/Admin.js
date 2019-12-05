@@ -1,4 +1,4 @@
-import {layoutHTML,homeEvent,adminEvent,coursesEvent} from "../Controllers/LayoutController.js";
+import {layoutHTML,homeEvent,adminEvent,coursesEvent,tooltippedEvent} from "../Controllers/LayoutController.js";
 
 $(document).ready(function () {
     
@@ -7,7 +7,7 @@ $(document).ready(function () {
         homeEvent;
         adminEvent;
         coursesEvent;
-    
+        tooltippedEvent;
 
     $('.tooltipped').tooltip();
 

@@ -21,7 +21,7 @@
 
 <body>
  
-    <div style="width: 10%; height: 100%;" id="mainLayout"></div>
+    <div id="mainLayout"></div>
 
     <div class="container" id="layoutContainer">
         <div class="row z-depth-1" id="mainRow">
