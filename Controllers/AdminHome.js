@@ -13,6 +13,18 @@ $(document).ready(function(){
      $(document).on("click","#addCourse",(e)=>{
         window.open("AddCourse.php","_self");
      })
+
+     $(document).on("click","#ViewBtn",(e)=>{
+         console.log("view")
+     })
+
+     $(document).on("click","#EditBtn",(e)=>{
+        console.log("EditBtn")
+    })
+
+    $(document).on("click","#DeleteBtn",(e)=>{
+        DeleteCourse($(e.target).data("trainingcourseid"),$(e.target))
+    })
     
      //enabling the tabs effect
     $('.tabs').tabs();
@@ -32,6 +44,28 @@ $(document).ready(function(){
         }
     });
 
+    function DeleteCourse(trainingcourseid,CurrentBtn){
+        $.ajax({
+            url:`http://192.168.1.110:3000/trainingcourses/${trainingcourseid}`,
+            type:"DELETE",
+            success:(res)=>{
+                if(res.state){
+                    $(CurrentBtn).closest("tr").fadeOut(500,()=>{
+                        $(CurrentBtn).closest("tr").remove();
+                    })
+                    // alert(res.message)
+                }else{
+                    alert(res.message)
+                    $(CurrentBtn).parent().parent().html();
+                }
+                // $(row).remove(); //Remove the row containing the image element
+
+            },
+            error:(xhr,status,err)=>{
+                alert(err);
+            }
+        })
+    }
 });
 
 function BuildCourseBlock(trainingcourse){
@@ -44,24 +78,26 @@ function BuildCourseBlock(trainingcourse){
         <td>${trainingcourse.FeedbackCode}</td>
         <td>${trainingcourse.StartDate}</td>
         <td>
-            <button class="btn blue waves-effect waves-light">
-                <i class="material-icons">visibility</i>
+            <button class="btn blue waves-effect waves-light" id="ViewBtn" data-trainingcourseid='${trainingcourse.ID}'>
+                <i class="material-icons" style="pointer-events: none;">visibility</i>
             </button>
         </td>
         <td>
-            <button class="btn yellow waves-effect waves-light">
-                <i class="material-icons">edit</i>
+            <button class="btn yellow waves-effect waves-light"  id="EditBtn" data-trainingcourseid='${trainingcourse.ID}'>
+                <i class="material-icons" style="pointer-events: none;">edit</i>
             </button>
         </td>
         <td>
-            <button class="btn red waves-effect waves-light">
-                <i class="material-icons">cancel</i>
+            <button class="btn red waves-effect waves-light" id="DeleteBtn" data-trainingcourseid='${trainingcourse.ID}'>
+                <i class="material-icons"  style="pointer-events: none;">cancel</i>
             </button>
         </td>
     </tr>`
 
     return TableRow;
 }
+
+
 
 
 {/*
