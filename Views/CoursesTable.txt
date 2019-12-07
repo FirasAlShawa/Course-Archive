@@ -1,0 +1,168 @@
+ <div class="" id="CoursesTab" style="height: 100%;width: 100%;overflow-y: scroll;overflow-x: hidden;">
+                <div class="row">
+                    <div class="col s6" style="display: flex; justify-content: center; margin-top: 10px;">
+                        <button id="addCourse" class="btn waves-effect waves-light">
+                            Course
+                            <i class="material-icons right">
+                                add
+                            </i>
+                        </button>
+                    </div>
+                    <div class="col s6" style="display: flex; justify-content: center; margin-top: 10px;">
+                        <button class="btn waves-effect waves-light" >
+                            Search
+                            <i class="material-icons right">
+                                search
+                            </i>
+                        </button>
+                    </div>
+                </div>
+                <table class="responsive-table" style="margin-left: 20px;padding-right: 10px;">
+                    <thead>
+                        <tr role="row">
+                            <th>ID</th>
+                            <th>
+                                Number</th>
+                            <th>
+                                Name</th>
+                            <th>Trainer
+                            </th>
+                            <th>
+                                FBCode</th>
+                            <th>Start
+                                Date</th>
+                            <th>View</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr role="row">
+                            <td>1</td>
+                            <td>079851485</td>
+                            <td>Java</td>
+                            <td>samer</td>
+                            <td>789</td>
+                            <td>04/12/2019</td>
+                            <td><button class="btn blue waves-effect waves-light"><i
+                                        class="material-icons">visibility</i></button></td>
+                            <td><button class="btn yellow waves-effect waves-light"><i
+                                        class="material-icons">edit</i></button></td>
+                            <td><button class="btn red waves-effect waves-light"><i
+                                        class="material-icons">cancel</i></button></td>
+                        </tr>
+                        <tr role="row">
+                            <td>2</td>
+                            <td>079851485</td>
+                            <td>Java</td>
+                            <td>Mohammad</td>
+                            <td>741</td>
+                            <td>04/12/2019</td>
+                            <td><button class="btn blue waves-effect waves-light"><i
+                                        class="material-icons">visibility</i></button></td>
+                            <td><button class="btn yellow waves-effect waves-light"><i
+                                        class="material-icons">edit</i></button></td>
+                            <td><button class="btn red waves-effect waves-light"><i
+                                        class="material-icons">cancel</i></button></td>
+                        </tr>
+                        <tr role="row">
+                            <td>3</td>
+                            <td>079851478</td>
+                            <td>C#</td>
+                            <td>Omar</td>
+                            <td>745</td>
+                            <td>04/12/2019</td>
+                            <td><button class="btn blue waves-effect waves-light"><i
+                                        class="material-icons">visibility</i></button></td>
+                            <td><button class="btn yellow waves-effect waves-light"><i
+                                        class="material-icons">edit</i></button></td>
+                            <td><button class="btn red waves-effect waves-light"><i
+                                        class="material-icons">cancel</i></button></td>
+                        </tr>
+                        <tr role="row">
+                            <td>4</td>
+                            <td>079851354</td>
+                            <td>Network</td>
+                            <td>Adel</td>
+                            <td>965</td>
+                            <td>04/12/2019</td>
+                            <td><button class="btn blue waves-effect waves-light"><i
+                                        class="material-icons">visibility</i></button></td>
+                            <td><button class="btn yellow waves-effect waves-light"><i
+                                        class="material-icons">edit</i></button></td>
+                            <td><button class="btn red waves-effect waves-light"><i
+                                        class="material-icons">cancel</i></button></td>
+                        </tr>
+                        <tr role="row">
+                            <td>5</td>
+                            <td>079851363</td>
+                            <td>Network2</td>
+                            <td>fadi</td>
+                            <td>412</td>
+                            <td>04/12/2019</td>
+                            <td><button class="btn blue waves-effect waves-light"><i
+                                        class="material-icons">visibility</i></button></td>
+                            <td><button class="btn yellow waves-effect waves-light"><i
+                                        class="material-icons">edit</i></button></td>
+                            <td><button class="btn red waves-effect waves-light"><i
+                                        class="material-icons">cancel</i></button></td>
+                        </tr>
+                        <tr role="row">
+                            <td>6</td>
+                            <td>079851363</td>
+                            <td>Python</td>
+                            <td>saeed</td>
+                            <td>523</td>
+                            <td>04/12/2019</td>
+                            <td><button class="btn blue waves-effect waves-light"><i
+                                        class="material-icons">visibility</i></button></td>
+                            <td><button class="btn yellow waves-effect waves-light"><i
+                                        class="material-icons">edit</i></button></td>
+                            <td><button class="btn red waves-effect waves-light"><i
+                                        class="material-icons">cancel</i></button></td>
+                        </tr>
+                        <tr role="row">
+                            <td>7</td>
+                            <td>079851789</td>
+                            <td>Algorithms</td>
+                            <td>Lames</td>
+                            <td>582</td>
+                            <td>04/12/2019</td>
+                            <td><button class="btn blue waves-effect waves-light"><i
+                                        class="material-icons">visibility</i></button></td>
+                            <td><button class="btn yellow waves-effect waves-light"><i
+                                        class="material-icons">edit</i></button></td>
+                            <td><button class="btn red waves-effect waves-light"><i
+                                        class="material-icons">cancel</i></button></td>
+                        </tr>
+                        <tr role="row">
+                            <td>8</td>
+                            <td>079851555</td>
+                            <td>Modeling</td>
+                            <td>Jomana</td>
+                            <td>852</td>
+                            <td>04/12/2019</td>
+                            <td><button class="btn blue waves-effect waves-light"><i
+                                        class="material-icons">visibility</i></button></td>
+                            <td><button class="btn yellow waves-effect waves-light"><i
+                                        class="material-icons">edit</i></button></td>
+                            <td><button class="btn red waves-effect waves-light"><i
+                                        class="material-icons">cancel</i></button></td>
+                        </tr>
+                        <tr role="row">
+                            <td>9</td>
+                            <td>079851555</td>
+                            <td>Modeling</td>
+                            <td>Reem</td>
+                            <td>951</td>
+                            <td>04/12/2019</td>
+                            <td><button class="btn blue waves-effect waves-light"><i
+                                        class="material-icons">visibility</i></button></td>
+                            <td><button class="btn yellow waves-effect waves-light"><i
+                                        class="material-icons">edit</i></button></td>
+                            <td><button class="btn red waves-effect waves-light"><i
+                                        class="material-icons">cancel</i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>

@@ -16,7 +16,7 @@
 <body>
     <div id="mainLayout"></div>
 
-    <div class="container" style="width: 90%; height: 100%;  display: flex;   align-items: center;">
+    <div class="container" id="layoutContainer">
         <div class="row z-depth-1"
             style="display: flex;justify-content: center;align-items: center;height: 90%; width: 95%;">
             <div class="col s2" style="margin: 0;width: 100%;height: 100%; overflow-y: overlay;">

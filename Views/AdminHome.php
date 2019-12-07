@@ -6,36 +6,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- My layout style -->
+    <link rel="stylesheet" href="../assets/css/mainLayout.css"> 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            background-color: #e3e3e3;
-            display: flex;
-        }
-
-        .LeftEmptySpace {
-            height: 100%;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .fab_parent {
-            display: flex;
-            justify-content: space-around;
-            flex-direction: column;
-            margin-right: -20px;
-        }
-
-        .Rounded-Shit {
-            margin-top: 10px;
-            margin-bottom: 10px;
+        #CoursesTable{
+            margin-left: 20px;
+            padding-right: 10px;
         }
     </style>
 </head>
@@ -96,7 +74,7 @@
                         </button>
                     </div>
                 </div>
-                <table class="responsive-table" style="margin-left: 20px;padding-right: 10px;">
+                <table class="responsive-table" id="CoursesTable">
                     <thead>
                         <tr role="row">
                             <th>ID</th>
@@ -115,134 +93,7 @@
                             <th>Delete</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr role="row">
-                            <td>1</td>
-                            <td>079851485</td>
-                            <td>Java</td>
-                            <td>samer</td>
-                            <td>789</td>
-                            <td>04/12/2019</td>
-                            <td><button class="btn blue waves-effect waves-light"><i
-                                        class="material-icons">visibility</i></button></td>
-                            <td><button class="btn yellow waves-effect waves-light"><i
-                                        class="material-icons">edit</i></button></td>
-                            <td><button class="btn red waves-effect waves-light"><i
-                                        class="material-icons">cancel</i></button></td>
-                        </tr>
-                        <tr role="row">
-                            <td>2</td>
-                            <td>079851485</td>
-                            <td>Java</td>
-                            <td>Mohammad</td>
-                            <td>741</td>
-                            <td>04/12/2019</td>
-                            <td><button class="btn blue waves-effect waves-light"><i
-                                        class="material-icons">visibility</i></button></td>
-                            <td><button class="btn yellow waves-effect waves-light"><i
-                                        class="material-icons">edit</i></button></td>
-                            <td><button class="btn red waves-effect waves-light"><i
-                                        class="material-icons">cancel</i></button></td>
-                        </tr>
-                        <tr role="row">
-                            <td>3</td>
-                            <td>079851478</td>
-                            <td>C#</td>
-                            <td>Omar</td>
-                            <td>745</td>
-                            <td>04/12/2019</td>
-                            <td><button class="btn blue waves-effect waves-light"><i
-                                        class="material-icons">visibility</i></button></td>
-                            <td><button class="btn yellow waves-effect waves-light"><i
-                                        class="material-icons">edit</i></button></td>
-                            <td><button class="btn red waves-effect waves-light"><i
-                                        class="material-icons">cancel</i></button></td>
-                        </tr>
-                        <tr role="row">
-                            <td>4</td>
-                            <td>079851354</td>
-                            <td>Network</td>
-                            <td>Adel</td>
-                            <td>965</td>
-                            <td>04/12/2019</td>
-                            <td><button class="btn blue waves-effect waves-light"><i
-                                        class="material-icons">visibility</i></button></td>
-                            <td><button class="btn yellow waves-effect waves-light"><i
-                                        class="material-icons">edit</i></button></td>
-                            <td><button class="btn red waves-effect waves-light"><i
-                                        class="material-icons">cancel</i></button></td>
-                        </tr>
-                        <tr role="row">
-                            <td>5</td>
-                            <td>079851363</td>
-                            <td>Network2</td>
-                            <td>fadi</td>
-                            <td>412</td>
-                            <td>04/12/2019</td>
-                            <td><button class="btn blue waves-effect waves-light"><i
-                                        class="material-icons">visibility</i></button></td>
-                            <td><button class="btn yellow waves-effect waves-light"><i
-                                        class="material-icons">edit</i></button></td>
-                            <td><button class="btn red waves-effect waves-light"><i
-                                        class="material-icons">cancel</i></button></td>
-                        </tr>
-                        <tr role="row">
-                            <td>6</td>
-                            <td>079851363</td>
-                            <td>Python</td>
-                            <td>saeed</td>
-                            <td>523</td>
-                            <td>04/12/2019</td>
-                            <td><button class="btn blue waves-effect waves-light"><i
-                                        class="material-icons">visibility</i></button></td>
-                            <td><button class="btn yellow waves-effect waves-light"><i
-                                        class="material-icons">edit</i></button></td>
-                            <td><button class="btn red waves-effect waves-light"><i
-                                        class="material-icons">cancel</i></button></td>
-                        </tr>
-                        <tr role="row">
-                            <td>7</td>
-                            <td>079851789</td>
-                            <td>Algorithms</td>
-                            <td>Lames</td>
-                            <td>582</td>
-                            <td>04/12/2019</td>
-                            <td><button class="btn blue waves-effect waves-light"><i
-                                        class="material-icons">visibility</i></button></td>
-                            <td><button class="btn yellow waves-effect waves-light"><i
-                                        class="material-icons">edit</i></button></td>
-                            <td><button class="btn red waves-effect waves-light"><i
-                                        class="material-icons">cancel</i></button></td>
-                        </tr>
-                        <tr role="row">
-                            <td>8</td>
-                            <td>079851555</td>
-                            <td>Modeling</td>
-                            <td>Jomana</td>
-                            <td>852</td>
-                            <td>04/12/2019</td>
-                            <td><button class="btn blue waves-effect waves-light"><i
-                                        class="material-icons">visibility</i></button></td>
-                            <td><button class="btn yellow waves-effect waves-light"><i
-                                        class="material-icons">edit</i></button></td>
-                            <td><button class="btn red waves-effect waves-light"><i
-                                        class="material-icons">cancel</i></button></td>
-                        </tr>
-                        <tr role="row">
-                            <td>9</td>
-                            <td>079851555</td>
-                            <td>Modeling</td>
-                            <td>Reem</td>
-                            <td>951</td>
-                            <td>04/12/2019</td>
-                            <td><button class="btn blue waves-effect waves-light"><i
-                                        class="material-icons">visibility</i></button></td>
-                            <td><button class="btn yellow waves-effect waves-light"><i
-                                        class="material-icons">edit</i></button></td>
-                            <td><button class="btn red waves-effect waves-light"><i
-                                        class="material-icons">cancel</i></button></td>
-                        </tr>
-                    </tbody>
+                    <tbody id="CoursesTableTBody"></tbody>
                 </table>
             </div>
 
@@ -258,30 +109,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.tooltipped').tooltip();
-            $("#Home").click(() => {
-                window.open("index.php", "_self");
-            });
-            $("#Admin").click(() => {
-                window.open("Admin.php", "_self");
-            });
-            $("#Courses").click(() => {
-                window.open("Courses.php", "_self");
-            });
-            $("#addCourse").click(()=>{
-                window.open("AddCourse.php","_self");
-            })
-            $('.tabs').tabs();
-
-            $('.collapsible').collapsible();
-
-
-        });
-
-
-    </script>
+    <script type="module" src="../Controllers/AdminHome.js"></script>
 </body>
 
 </html>
