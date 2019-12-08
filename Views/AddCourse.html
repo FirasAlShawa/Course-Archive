@@ -6,68 +6,29 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- My layout style -->
+    <link rel="stylesheet" href="../assets/css/mainLayout.css"> 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            background-color: #e3e3e3;
+        #OptionBtns{
             display: flex;
+            justify-content: space-evenly;
         }
 
-        .LeftEmptySpace {
-            height: 100%;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .fab_parent {
-            display: flex;
-            justify-content: space-around;
-            flex-direction: column;
-            margin-right: -20px;
-        }
-
-        .Rounded-Shit {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
+        form{width: 75%;}
     </style>
 </head>
 
 <body>
-    <div style="width: 10%; height: 100%;">
-        <div class=" LeftEmptySpace teal white-text">
-            <div class="fab_parent">
-
-                <a class="btn-floating btn-large waves-effect waves-light red Rounded-Shit btn tooltipped"
-                    data-position="buttom" id="Home" data-tooltip="Home">
-                    <i class="material-icons large left">home</i>
-                </a>
-                <a class="btn-floating btn-large waves-effect waves-light red  Rounded-Shit btn tooltipped"
-                    data-position="buttom" id="Admin" data-tooltip="Admin">
-                    <i class="material-icons large left">account_circle</i>
-                </a>
-                <a class="btn-floating btn-large waves-effect waves-light red Rounded-Shit btn tooltipped"
-                    data-position="buttom" id="Courses" data-tooltip="Courses">
-                    <i class="material-icons large left">import_contacts</i>
-                </a>
-            </div>
-        </div>
-    </div>
+        <div id="mainLayout"></div>
     <!-- Container -->
-    <div class="container" style="width: 90%; height: 100%;  display: flex;   align-items: center;">
-        <div class="row z-depth-1"
-            style="display: flex; flex-direction: column;align-items: center;height: 90%;width: 85%;">
+    <div class="container" id="layoutContainer">
+        <div class="row z-depth-1" id="mainRow">
             <div class="col s12" style="margin: 0; padding :0px;display: flex;flex-direction: column; ">
                 <div class="wrapper" style="margin-top: 20px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
                     <h1>New Trainning Course</h1>
-                        <form action="">
+                        <form id="AddForm">
                                 <div class="row">
                                     <div class="col s6">
                                         <div class="input-field">
@@ -85,18 +46,17 @@
                                 <div class="row">
                                     <div class="col s6">
                                         <div class="input-field">
-                                            <input type="text" name="Trainer" id="Trainer">
-                                            <label for="Trainer">Course Trainer</label>
+                                            <input type="text" name="trainer" id="trainer">
+                                            <label for="trainer">Course Trainer</label>
                                         </div>
                                     </div>
                                     <div class="col s6">
                                         <label for="Internal">Internal</label>
                                         <div class="input-field">
-                
                                             <div class="switch">
                                                 <label>
                                                     In
-                                                    <input type="checkbox" id="Internal">
+                                                    <input type="checkbox"  id="Internal">
                                                     <span class="lever"></span>
                                                     Out
                                                 </label>
@@ -105,20 +65,31 @@
                                     </div>
                                 </div>
                                 <div class="input-field">
-                                        <input type="Number" name="FeedbackCode" id="FeedbackCode" data-length=3>
-                                        <label for="FeedbackCode">Course FeedbackCode</label>
+                                        <input type="Number" name="feedback" id="feedback" data-length=3>
+                                        <label for="feedback">Course FeedbackCode</label>
                                 </div>
                                 
                                 <div class="input-field">
-                                    <input type="Date" name="StartDate" id="StartDate">
-                                    <label for="StartDate">Course StartDate</label>
+                                    <input type="Date" name="startdate" id="startdate">
+                                    <label for="startdate">Course StartDate</label>
                                 </div>
+                                <div class="input-field">
+                                        <input type="Date" name="enddate" id="enddate">
+                                        <label for="enddate">Course EndDate</label>
+                                    </div>
                                
-                                <button type="submit" class="btn waves-effect waves-light" style="width:100%;">
-                                    <i class="material-icons">add</i>
-                                </button>
+                               
+                                
             
                             </form>
+                            <div class="col s12" id="OptionBtns">
+                                    <button id="BackBtn" class="btn waves-effect waves-light">Back<i
+                                    class="material-icons left">arrow_back</i></button>
+                                    
+                                    <button type="submit" id="AddCourse" form="AddForm" class="btn waves-effect waves-light" >Add
+                                            <i class="material-icons right">add</i>
+                                    </button>
+                                </div>
                 </div>
             </div><!-- End Col s12 -->
         </div><!-- End Row -->
@@ -130,26 +101,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.tooltipped').tooltip();
-            $("#Home").click(() => {
-                window.open("index.html", "_self");
-            });
-            $("#Admin").click(() => {
-                window.open("Admin.html", "_self");
-            });
-            $("#Courses").click(() => {
-                window.open("Courses.html", "_self");
-            });
-            $('.tabs').tabs();
-            $('.collapsible').collapsible();
-            $('select').formSelect();
-
-        });
-
-
-    </script>
+    <script type="module" src="../Controllers/AddCourse.js" ></script>
 </body>
 
 </html>

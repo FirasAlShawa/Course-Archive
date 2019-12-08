@@ -37,7 +37,7 @@ $(document).ready(function(){
            contentType:"application/x-www-form-urlencoded",
            data : {data :trainingcourse},
            success:(res)=>{
-            console.log(res)
+            window.open("AdminHome.html","_self")
            },
            error:(xhr,status,err)=>{
             console.log(err)
