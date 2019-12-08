@@ -1,0 +1,114 @@
+{
+    "quersions": [
+        {
+            "quersiton": "The objectives of the training were clearly defined.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "Participation and interaction were encouraged.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "The topics covered were relevant to me.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "The content was organized and easy to follow.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "The materials distributed were helpful.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "This training experience will be useful my work in",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "The trainer was knowledgeable about the training topics.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "The trainer was well prepared.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "The training objectives were met.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "The time allotted for the training was sufficient.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        },
+        {
+            "quersiton": "The meeting room and facilities were adequate and comfortable.",
+            "answers": [
+                "Strongly Agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly Disagree"
+            ]
+        }
+    ]
+}
