@@ -35,6 +35,6 @@ $(document).ready(function(){
          $("#Name").text(trainingcourse.Name);
          $("#Number").text(trainingcourse.Number);
          $("#startdate").text((trainingcourse.StartDate).substring(0,10));
-         $("#enddate").text((trainingcourse.EndDate).substring(0,10));
-     }
+         $("#enddate").text(((trainingcourse.EndDate != null)?(trainingcourse.EndDate).substring(0,10) : "Empty" ));
+      }
 });

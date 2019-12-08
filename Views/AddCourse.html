@@ -90,12 +90,17 @@
                                         </div>
                                     </div>
                                     <div class="col s6">
+                                        <label for="Internal">Internal</label>
                                         <div class="input-field">
-                                            <select>
-                                                <option value="0">In</option>
-                                                <option value="1">Out</option>
-                                            </select>
-                                            <label>Internal</label>
+                
+                                            <div class="switch">
+                                                <label>
+                                                    In
+                                                    <input type="checkbox" id="Internal">
+                                                    <span class="lever"></span>
+                                                    Out
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -129,13 +134,13 @@
         $(document).ready(function () {
             $('.tooltipped').tooltip();
             $("#Home").click(() => {
-                window.open("index.php", "_self");
+                window.open("index.html", "_self");
             });
             $("#Admin").click(() => {
-                window.open("Admin.php", "_self");
+                window.open("Admin.html", "_self");
             });
             $("#Courses").click(() => {
-                window.open("Courses.php", "_self");
+                window.open("Courses.html", "_self");
             });
             $('.tabs').tabs();
             $('.collapsible').collapsible();

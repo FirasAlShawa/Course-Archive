@@ -17,16 +17,16 @@ const layoutHTML =
     +"</div>";
 
     var homeEvent = $(document).on("click","#Home",(e)=>{
-        window.open("index.php","_self");
+        window.open("index.html","_self");
 
     })
 
     var adminEvent =  $(document).on("click","#Admin",(e)=>{
-        window.open("Admin.php","_self");
+        window.open("Admin.html","_self");
     });
 
     var coursesEvent = $(document).on("click","#Courses",(e)=>{
-        window.open("Courses.php","_self");
+        window.open("Courses.html","_self");
     })
 
     

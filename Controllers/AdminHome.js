@@ -13,18 +13,17 @@ $(document).ready(function(){
 
         //Add new course button event
         $(document).on("click","#addCourse",(e)=>{
-            window.open("AddCourse.php","_self");
+            window.open("AddCourse.html","_self");
         })
 
 
     //TableRow Buttons Events
         $(document).on("click","#ViewBtn",(e)=>{
-            localStorage["ViewCourse"] = $(e.target).data("trainingcourseid")
-            window.open("ViewCourse.html","_self")
+            ViewCourse(e);
         })
 
         $(document).on("click","#EditBtn",(e)=>{
-            console.log("EditBtn")
+            EditCourse(e)
         })
 
         $(document).on("click","#DeleteBtn",(e)=>{
@@ -103,10 +102,15 @@ $(document).ready(function(){
         })
     }
 
-    function ViewCourse(){
-
+    function ViewCourse(event){
+        localStorage["ViewCourse"] = $(event.target).data("trainingcourseid")
+        window.open("ViewCourse.html","_self")
     }
 
+    function EditCourse(event){
+        localStorage["EditCourse"] = $(event.target).data("trainingcourseid");
+        window.open("EditCourse.html","_self")
+    }
    
 });
 

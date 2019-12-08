@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- My layout style -->
+    <link rel="stylesheet" href="../assets/css/mainLayout.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    .OptionBtns{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="mainLayout"></div>
+
+    <div class="container" style="width: 90%; height: 100%;  display: flex;   align-items: center;">
+        <div class="row z-depth-1"
+            style="display: flex;justify-content: center;align-items: center;height: 90%; width: 95%;">
+            <div class="col s12" style="margin: 0;">
+                <div class="row">
+                    <form id="EditForm" contentType="application/x-www-form-unlencode">
+                    <div class="col s12">
+                        <div class="input-field">
+                            <input type="number" id="id" placeholder="id" readonly />
+                            <label for="id">id</label>
+                        </div>
+                    </div>
+                    <div class="col s4">
+
+                        <div class="input-field">
+                            <input type="number" placeholder="feedback" id="feedback" maxlength="3">
+                            <label for="feedback">feedback</label>
+                        </div>
+                    </div>
+                    <div class="col s4">
+
+                        <div class="input-field">
+                            <input type="text" placeholder="trainer" id="trainer">
+                            <label for="trainer">trainer</label>
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <label for="Internal">Internal</label>
+                        <div class="input-field">
+
+                            <div class="switch">
+                                <label>
+                                    In
+                                    <input type="checkbox" id="Internal">
+                                    <span class="lever"></span>
+                                    Out
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col s6">
+                        <div class="input-field">
+                            <input type="text" placeholder="Name" id="Name">
+                            <label for="Name">Name</label>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="input-field">
+                            <input type="Number" placeholder="Number" id="Number" maxlength="6">
+                            <label for="Number">Number</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col s6">
+                        <div class="input-field">
+                            <input type="date" name="startdate" placeholder="start date" id="startdate">
+                            <label for="startdate">startdate</label>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="input-field">
+                            <input type="date" name="enddate" placeholder="end date" id="enddate">
+                            <label for="enddate">enddate</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+                <div class="col s12" class="OptionBtns">
+                    <button id="BackBtn" class="btn waves-effect waves-light">Back<i
+                    class="material-icons left">arrow_back</i></button>
+                    
+                    <button id="UpdateBtn" type="submit" form="EditForm" class="btn waves-effect waves-light">Send<i
+                        class="material-icons left">send</i></button>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="module" src="../Controllers/EditCourse.js"></script>
+</body>
+
+</html>

@@ -25,7 +25,7 @@ $(document).ready(function () {
             success:(res)=>{
                 if(res == "Success"){
                     alert("Weclome back Admin !")
-                    window.open("AdminHome.php","_self");}
+                    window.open("AdminHome.html","_self");}
                 else
                     alert(res)
             },
