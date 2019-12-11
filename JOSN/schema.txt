@@ -8,3 +8,26 @@ Schema:
     StartDate: '{{date(new Date(2019, 0, 1), new Date(2020,9,1), "YYYY-MM-dd")}}',
     EndDate: '{{date(new Date(2021,0,1), new Date(2022,9,1), "YYYY-MM-dd")}}',
     Internal:'{{random(0,1)}}' ,
+
+
+    ID: null,
+    FeedbackCode: '{{integer(111, 999)}}',
+    Number: '{{integer(111111, 999999)}}',
+    Name: '{{random("Java", "Network", "Python","Software Design","ASP","C#","C++")}}',
+    TrainerName: '{{firstName()}}',
+    StartDate: '{{date(new Date(2019, 0, 1), new Date(2020,9,1), "YYYY-MM-dd")}}',
+    EndDate: '{{date(new Date(2021,0,1), new Date(2022,9,1), "YYYY-MM-dd")}}',
+    Internal:'{{random(0,1)}}' ,
+
+    q1 :'{{integer(1,5)}}',
+    q2 :'{{integer(1,5)}}',
+    q3 :'{{integer(1,5)}}',
+    q4 :'{{integer(1,5)}}',
+    q5 :'{{integer(1,5)}}',
+    q6 :'{{integer(1,5)}}',
+    q7 :'{{integer(1,5)}}',
+    q8 :'{{integer(1,5)}}',
+    q9 :'{{integer(1,5)}}',
+    q10 :'{{integer(1,5)}}',
+    q11 :'{{integer(1,5)}}',
+    total:

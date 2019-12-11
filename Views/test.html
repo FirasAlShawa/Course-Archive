@@ -1,70 +1,913 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
+</head>
   <body>
-      <div class="container">
-          <div class="row">
-            <col class="6">
-            <form id="AdminLoginForm" method="get" contentType="application/x-www-form-unlencode" >
-                <div class="input-field">
-                    <i class="material-icons prefix">email</i>
-                    <input type="text" name="Email" id="Email" autocomplete="false">
-                    <label for="Email">Email</label>
-                </div>
-                <div class="input-field">
-                    <i class="material-icons prefix">security</i>
-                    <input type="password" name="Password" id="Password" autocomplete="false">
-                    <label for="Password">Password</label>
-                </div>
-
-                
-            </form>
-            <button id="LoginBtn" type="submit" form="AdminLoginForm" class="btn waves-effect waves-light" type="submit">
-                Login
-            </button>
-            </div>
-          </div>
-      </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+     
     <script>
+
+        var data = [
+  
+  {
+    "feedbackcode": 130,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 5,
+      "q3": 4,
+      "q4": 2,
+      "q5": 3,
+      "q6": 5,
+      "q7": 4,
+      "q8": 4,
+      "q9": 5,
+      "q10": 3,
+      "q11": 3,
+      "total": 39
+    }
+  },
+  {
+    "feedbackcode": 122,
+    "answers": {
+      "id": null,
+      "q1": 3,
+      "q2": 4,
+      "q3": 5,
+      "q4": 2,
+      "q5": 4,
+      "q6": 2,
+      "q7": 5,
+      "q8": 5,
+      "q9": 1,
+      "q10": 1,
+      "q11": 4,
+      "total": 36
+    }
+  },
+  {
+    "feedbackcode": 96,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 4,
+      "q3": 1,
+      "q4": 2,
+      "q5": 2,
+      "q6": 4,
+      "q7": 1,
+      "q8": 4,
+      "q9": 4,
+      "q10": 1,
+      "q11": 5,
+      "total": 29
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 5,
+      "q2": 4,
+      "q3": 5,
+      "q4": 5,
+      "q5": 5,
+      "q6": 2,
+      "q7": 2,
+      "q8": 5,
+      "q9": 5,
+      "q10": 4,
+      "q11": 5,
+      "total": 47
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 1,
+      "q3": 3,
+      "q4": 2,
+      "q5": 3,
+      "q6": 3,
+      "q7": 1,
+      "q8": 4,
+      "q9": 4,
+      "q10": 3,
+      "q11": 5,
+      "total": 31
+    }
+  },
+  {
+    "feedbackcode": 96,
+    "answers": {
+      "id": null,
+      "q1": 3,
+      "q2": 1,
+      "q3": 2,
+      "q4": 4,
+      "q5": 2,
+      "q6": 2,
+      "q7": 1,
+      "q8": 2,
+      "q9": 4,
+      "q10": 3,
+      "q11": 5,
+      "total": 29
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 2,
+      "q3": 4,
+      "q4": 4,
+      "q5": 5,
+      "q6": 3,
+      "q7": 4,
+      "q8": 3,
+      "q9": 1,
+      "q10": 1,
+      "q11": 2,
+      "total": 33
+    }
+  },
+  {
+    "feedbackcode": 122,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 5,
+      "q3": 5,
+      "q4": 1,
+      "q5": 4,
+      "q6": 2,
+      "q7": 2,
+      "q8": 2,
+      "q9": 4,
+      "q10": 2,
+      "q11": 1,
+      "total": 30
+    }
+  },
+  {
+    "feedbackcode": 130,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 5,
+      "q3": 5,
+      "q4": 3,
+      "q5": 3,
+      "q6": 3,
+      "q7": 2,
+      "q8": 3,
+      "q9": 1,
+      "q10": 2,
+      "q11": 3,
+      "total": 34
+    }
+  },
+  {
+    "feedbackcode": 100,
+    "answers": {
+      "id": null,
+      "q1": 5,
+      "q2": 4,
+      "q3": 1,
+      "q4": 3,
+      "q5": 1,
+      "q6": 3,
+      "q7": 4,
+      "q8": 5,
+      "q9": 3,
+      "q10": 5,
+      "q11": 3,
+      "total": 37
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 5,
+      "q2": 4,
+      "q3": 1,
+      "q4": 4,
+      "q5": 4,
+      "q6": 2,
+      "q7": 1,
+      "q8": 4,
+      "q9": 2,
+      "q10": 4,
+      "q11": 1,
+      "total": 32
+    }
+  },
+  {
+    "feedbackcode": 122,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 5,
+      "q3": 5,
+      "q4": 1,
+      "q5": 3,
+      "q6": 4,
+      "q7": 5,
+      "q8": 2,
+      "q9": 1,
+      "q10": 5,
+      "q11": 2,
+      "total": 34
+    }
+  },
+  {
+    "feedbackcode": 130,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 5,
+      "q3": 4,
+      "q4": 1,
+      "q5": 1,
+      "q6": 1,
+      "q7": 5,
+      "q8": 1,
+      "q9": 1,
+      "q10": 5,
+      "q11": 5,
+      "total": 31
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 5,
+      "q3": 4,
+      "q4": 5,
+      "q5": 5,
+      "q6": 3,
+      "q7": 2,
+      "q8": 4,
+      "q9": 5,
+      "q10": 3,
+      "q11": 4,
+      "total": 44
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 5,
+      "q2": 2,
+      "q3": 1,
+      "q4": 1,
+      "q5": 5,
+      "q6": 1,
+      "q7": 2,
+      "q8": 4,
+      "q9": 3,
+      "q10": 4,
+      "q11": 3,
+      "total": 31
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 4,
+      "q3": 3,
+      "q4": 1,
+      "q5": 2,
+      "q6": 4,
+      "q7": 4,
+      "q8": 4,
+      "q9": 5,
+      "q10": 5,
+      "q11": 3,
+      "total": 37
+    }
+  },
+  {
+    "feedbackcode": 100,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 3,
+      "q3": 1,
+      "q4": 5,
+      "q5": 3,
+      "q6": 3,
+      "q7": 2,
+      "q8": 3,
+      "q9": 4,
+      "q10": 1,
+      "q11": 4,
+      "total": 33
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 5,
+      "q2": 1,
+      "q3": 4,
+      "q4": 1,
+      "q5": 2,
+      "q6": 1,
+      "q7": 1,
+      "q8": 4,
+      "q9": 4,
+      "q10": 4,
+      "q11": 5,
+      "total": 32
+    }
+  },
+  {
+    "feedbackcode": 96,
+    "answers": {
+      "id": null,
+      "q1": 5,
+      "q2": 5,
+      "q3": 1,
+      "q4": 4,
+      "q5": 1,
+      "q6": 5,
+      "q7": 2,
+      "q8": 4,
+      "q9": 2,
+      "q10": 5,
+      "q11": 4,
+      "total": 38
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 3,
+      "q3": 2,
+      "q4": 4,
+      "q5": 4,
+      "q6": 2,
+      "q7": 4,
+      "q8": 1,
+      "q9": 5,
+      "q10": 1,
+      "q11": 5,
+      "total": 32
+    }
+  },
+  {
+    "feedbackcode": 122,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 4,
+      "q3": 1,
+      "q4": 2,
+      "q5": 3,
+      "q6": 3,
+      "q7": 3,
+      "q8": 5,
+      "q9": 4,
+      "q10": 1,
+      "q11": 1,
+      "total": 29
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 5,
+      "q3": 1,
+      "q4": 3,
+      "q5": 1,
+      "q6": 5,
+      "q7": 5,
+      "q8": 5,
+      "q9": 2,
+      "q10": 5,
+      "q11": 4,
+      "total": 38
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 3,
+      "q2": 5,
+      "q3": 2,
+      "q4": 2,
+      "q5": 5,
+      "q6": 5,
+      "q7": 4,
+      "q8": 5,
+      "q9": 2,
+      "q10": 4,
+      "q11": 4,
+      "total": 41
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 4,
+      "q3": 2,
+      "q4": 2,
+      "q5": 4,
+      "q6": 5,
+      "q7": 3,
+      "q8": 4,
+      "q9": 3,
+      "q10": 1,
+      "q11": 4,
+      "total": 34
+    }
+  },
+  {
+    "feedbackcode": 96,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 5,
+      "q3": 4,
+      "q4": 2,
+      "q5": 4,
+      "q6": 1,
+      "q7": 3,
+      "q8": 5,
+      "q9": 5,
+      "q10": 2,
+      "q11": 1,
+      "total": 36
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 4,
+      "q3": 3,
+      "q4": 2,
+      "q5": 5,
+      "q6": 1,
+      "q7": 2,
+      "q8": 1,
+      "q9": 5,
+      "q10": 2,
+      "q11": 5,
+      "total": 31
+    }
+  },
+  {
+    "feedbackcode": 130,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 2,
+      "q3": 2,
+      "q4": 3,
+      "q5": 2,
+      "q6": 1,
+      "q7": 1,
+      "q8": 1,
+      "q9": 2,
+      "q10": 2,
+      "q11": 5,
+      "total": 22
+    }
+  },
+  {
+    "feedbackcode": 96,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 3,
+      "q3": 4,
+      "q4": 1,
+      "q5": 2,
+      "q6": 5,
+      "q7": 2,
+      "q8": 4,
+      "q9": 2,
+      "q10": 4,
+      "q11": 4,
+      "total": 35
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 3,
+      "q2": 3,
+      "q3": 3,
+      "q4": 3,
+      "q5": 1,
+      "q6": 3,
+      "q7": 2,
+      "q8": 4,
+      "q9": 5,
+      "q10": 1,
+      "q11": 5,
+      "total": 33
+    }
+  },
+  {
+    "feedbackcode": 100,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 4,
+      "q3": 4,
+      "q4": 4,
+      "q5": 2,
+      "q6": 2,
+      "q7": 2,
+      "q8": 4,
+      "q9": 5,
+      "q10": 1,
+      "q11": 2,
+      "total": 32
+    }
+  },
+  {
+    "feedbackcode": 122,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 1,
+      "q3": 4,
+      "q4": 4,
+      "q5": 4,
+      "q6": 3,
+      "q7": 2,
+      "q8": 3,
+      "q9": 1,
+      "q10": 1,
+      "q11": 3,
+      "total": 27
+    }
+  },
+  {
+    "feedbackcode": 96,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 5,
+      "q3": 2,
+      "q4": 1,
+      "q5": 5,
+      "q6": 4,
+      "q7": 4,
+      "q8": 1,
+      "q9": 5,
+      "q10": 4,
+      "q11": 4,
+      "total": 39
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 4,
+      "q3": 1,
+      "q4": 1,
+      "q5": 2,
+      "q6": 3,
+      "q7": 3,
+      "q8": 1,
+      "q9": 4,
+      "q10": 4,
+      "q11": 2,
+      "total": 26
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 3,
+      "q3": 3,
+      "q4": 4,
+      "q5": 5,
+      "q6": 5,
+      "q7": 2,
+      "q8": 2,
+      "q9": 4,
+      "q10": 4,
+      "q11": 1,
+      "total": 34
+    }
+  },
+  {
+    "feedbackcode": 100,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 2,
+      "q3": 5,
+      "q4": 5,
+      "q5": 2,
+      "q6": 4,
+      "q7": 2,
+      "q8": 1,
+      "q9": 2,
+      "q10": 4,
+      "q11": 3,
+      "total": 34
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 5,
+      "q2": 5,
+      "q3": 3,
+      "q4": 4,
+      "q5": 1,
+      "q6": 4,
+      "q7": 3,
+      "q8": 5,
+      "q9": 4,
+      "q10": 3,
+      "q11": 2,
+      "total": 39
+    }
+  },
+  {
+    "feedbackcode": 97,
+    "answers": {
+      "id": null,
+      "q1": 3,
+      "q2": 4,
+      "q3": 4,
+      "q4": 1,
+      "q5": 4,
+      "q6": 1,
+      "q7": 5,
+      "q8": 2,
+      "q9": 5,
+      "q10": 5,
+      "q11": 4,
+      "total": 38
+    }
+  },
+  {
+    "feedbackcode": 130,
+    "answers": {
+      "id": null,
+      "q1": 3,
+      "q2": 2,
+      "q3": 1,
+      "q4": 5,
+      "q5": 5,
+      "q6": 4,
+      "q7": 1,
+      "q8": 3,
+      "q9": 5,
+      "q10": 3,
+      "q11": 1,
+      "total": 33
+    }
+  },
+  {
+    "feedbackcode": 100,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 4,
+      "q3": 4,
+      "q4": 5,
+      "q5": 2,
+      "q6": 2,
+      "q7": 2,
+      "q8": 4,
+      "q9": 3,
+      "q10": 5,
+      "q11": 3,
+      "total": 36
+    }
+  },
+  {
+    "feedbackcode": 122,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 5,
+      "q3": 4,
+      "q4": 2,
+      "q5": 3,
+      "q6": 2,
+      "q7": 5,
+      "q8": 3,
+      "q9": 5,
+      "q10": 1,
+      "q11": 1,
+      "total": 35
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 3,
+      "q2": 3,
+      "q3": 4,
+      "q4": 4,
+      "q5": 5,
+      "q6": 5,
+      "q7": 4,
+      "q8": 3,
+      "q9": 5,
+      "q10": 5,
+      "q11": 3,
+      "total": 44
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 2,
+      "q3": 2,
+      "q4": 1,
+      "q5": 2,
+      "q6": 1,
+      "q7": 4,
+      "q8": 1,
+      "q9": 4,
+      "q10": 4,
+      "q11": 1,
+      "total": 26
+    }
+  },
+  {
+    "feedbackcode": 122,
+    "answers": {
+      "id": null,
+      "q1": 2,
+      "q2": 1,
+      "q3": 3,
+      "q4": 1,
+      "q5": 2,
+      "q6": 4,
+      "q7": 3,
+      "q8": 4,
+      "q9": 3,
+      "q10": 2,
+      "q11": 3,
+      "total": 28
+    }
+  },
+  {
+    "feedbackcode": 130,
+    "answers": {
+      "id": null,
+      "q1": 5,
+      "q2": 3,
+      "q3": 3,
+      "q4": 3,
+      "q5": 2,
+      "q6": 1,
+      "q7": 4,
+      "q8": 2,
+      "q9": 3,
+      "q10": 1,
+      "q11": 3,
+      "total": 30
+    }
+  },
+  {
+    "feedbackcode": 122,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 2,
+      "q3": 2,
+      "q4": 5,
+      "q5": 3,
+      "q6": 2,
+      "q7": 2,
+      "q8": 1,
+      "q9": 5,
+      "q10": 5,
+      "q11": 1,
+      "total": 32
+    }
+  },
+  {
+    "feedbackcode": 130,
+    "answers": {
+      "id": null,
+      "q1": 3,
+      "q2": 4,
+      "q3": 4,
+      "q4": 4,
+      "q5": 5,
+      "q6": 3,
+      "q7": 4,
+      "q8": 2,
+      "q9": 5,
+      "q10": 4,
+      "q11": 2,
+      "total": 40
+    }
+  },
+  {
+    "feedbackcode": 130,
+    "answers": {
+      "id": null,
+      "q1": 3,
+      "q2": 1,
+      "q3": 4,
+      "q4": 5,
+      "q5": 1,
+      "q6": 3,
+      "q7": 4,
+      "q8": 4,
+      "q9": 5,
+      "q10": 5,
+      "q11": 1,
+      "total": 36
+    }
+  },
+  {
+    "feedbackcode": 100,
+    "answers": {
+      "id": null,
+      "q1": 1,
+      "q2": 1,
+      "q3": 3,
+      "q4": 4,
+      "q5": 2,
+      "q6": 4,
+      "q7": 5,
+      "q8": 4,
+      "q9": 5,
+      "q10": 4,
+      "q11": 4,
+      "total": 37
+    }
+  },
+  {
+    "feedbackcode": 135,
+    "answers": {
+      "id": null,
+      "q1": 4,
+      "q2": 2,
+      "q3": 2,
+      "q4": 2,
+      "q5": 3,
+      "q6": 3,
+      "q7": 5,
+      "q8": 2,
+      "q9": 2,
+      "q10": 5,
+      "q11": 1,
+      "total": 31
+    }
+  }
+];
+
         $(document).ready(function () {
-            $("#AdminLoginForm").submit((e)=>{
-                e.preventDefault();
+
+            data.map((doc)=>{
+                console.log(doc.feedbackcode)
+
                 $.ajax({
-                    type:"get",
-                    url:"http://localhost:3000/admin",
-                    data:{
-                        name:$("#Email").val(),
-                        password:$("#Password").val()
-                    },
-                    success:(res)=>{
-                        console.log(res)
-                        console.log($("#Email").val() + " => " +$("#Password").val())
-                        // if(res == "Success")
-                        //     window.open("AdminHome.html","_self");
-                        // else
-                        //     alert("Something Wrong!")
-                    },
-                    error :(err)=>{
-                        console.log(err)
-                    }
+                    url:{}
                 })
 
             })
         })
+
+
     </script>
     
 </body>

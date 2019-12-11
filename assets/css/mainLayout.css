@@ -47,7 +47,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 90%;
-     width: 95%;
+    width: 90%;
+    margin-left: 8%;
+    /* width: 95%; */
+
      /* width: 85%;" */
 }
 

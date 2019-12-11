@@ -15,10 +15,25 @@ $(document).ready(function () {
                 url:`http://192.168.1.110:3000/feedback/${code}`,
                 type:"GET",
                 success:(res)=>{
+                    // console.log("Auth AJAX Res : ")
+                    // console.log(res)
                     if(res.state){
-                        alert(res.message)
+                        $.ajax({
+                            url : "http://192.168.1.110:3000/feedback/",
+                            type:"POST",
+                            data : {Code : code},
+                            success :(res)=>{
+                                console.log(res)
+                                alert("Success")
+                                window.open("feedbackpage.html","_self")        
+                            },
+                            error:(xhr,status,err)=>{
+                                alert("Not Correct")
+                                alert(err)
+                            }
+                        })
                     }else{
-                        alert(res.message)
+                        alert("Error :"+res.message)
                     }
                 },
                 error:(xhr,status,err)=>{
