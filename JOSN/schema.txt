@@ -19,15 +19,33 @@ Schema:
     EndDate: '{{date(new Date(2021,0,1), new Date(2022,9,1), "YYYY-MM-dd")}}',
     Internal:'{{random(0,1)}}' ,
 
-    q1 :'{{integer(1,5)}}',
-    q2 :'{{integer(1,5)}}',
-    q3 :'{{integer(1,5)}}',
-    q4 :'{{integer(1,5)}}',
-    q5 :'{{integer(1,5)}}',
-    q6 :'{{integer(1,5)}}',
-    q7 :'{{integer(1,5)}}',
-    q8 :'{{integer(1,5)}}',
-    q9 :'{{integer(1,5)}}',
-    q10 :'{{integer(1,5)}}',
-    q11 :'{{integer(1,5)}}',
-    total:
+
+    feedback Schema:
+
+    [
+        '{{repeat(150,150)}}',
+        {
+            name :'{{firstName()}}',
+            feedbackCode:'{{integer(87,136)}}',
+            q1 :'{{integer(1,5)}}',
+            q2 :'{{integer(3,5)}}',
+            q3 :'{{integer(1,5)}}',
+            q4 :'{{integer(2,5)}}',
+            q5 :'{{integer(2,5)}}',
+            q6 :'{{integer(1,5)}}',
+            q7 :'{{integer(5,5)}}',
+            q8 :'{{integer(4,5)}}',
+            q9 :'{{integer(1,5)}}',
+            q10 :'{{integer(2,5)}}',
+            q11 :'{{integer(1,5)}}',
+            total: function total(tags){return this.q1+this.q2+this.q3+this.q4+this.q5+this.q6+this.q7+this.q8+this.q9+this.q10+this.q11;
+            },
+            query : function query(){
+                    var total = this.total;
+                    var newFeedback = "call newFeedback("+this.feedbackCode+");";
+                    var fillFeedback ="CALL fillFeedback("+this.q1+","+this.q2+","+this.q3+","+this.q4+","+this.q5+","+this.q6+","+this.q7+","+this.q8+","+this.q9+","+this.q10+","+this.q11+","+this.total+",'"+this.name+"');";
+                    return newFeedback + " " + fillFeedback;
+            }
+        }
+    ]
+
