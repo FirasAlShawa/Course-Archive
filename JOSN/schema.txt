@@ -1,25 +1,13 @@
 Schema:
 
-    ID: null,
-    FeedbackCode: '{{integer(111, 999)}}',
-    Number: '{{integer(111111, 999999)}}',
+    ID: '{{index(1)}}',
+    FeedbackCode: '{{index(100)}}',
+    Number: '{{integer(11111, 999999)}}',
     Name: '{{random("Java", "Network", "Python","Software Design","ASP","C#","C++")}}',
     TrainerName: '{{firstName()}}',
     StartDate: '{{date(new Date(2019, 0, 1), new Date(2020,9,1), "YYYY-MM-dd")}}',
     EndDate: '{{date(new Date(2021,0,1), new Date(2022,9,1), "YYYY-MM-dd")}}',
-    Internal:'{{random(0,1)}}' ,
-
-
-    ID: null,
-    FeedbackCode: '{{integer(111, 999)}}',
-    Number: '{{integer(111111, 999999)}}',
-    Name: '{{random("Java", "Network", "Python","Software Design","ASP","C#","C++")}}',
-    TrainerName: '{{firstName()}}',
-    StartDate: '{{date(new Date(2019, 0, 1), new Date(2020,9,1), "YYYY-MM-dd")}}',
-    EndDate: '{{date(new Date(2021,0,1), new Date(2022,9,1), "YYYY-MM-dd")}}',
-    Internal:'{{random(0,1)}}' ,
-
-
+    Internal:'{{random(0,1)}}' 
     feedback Schema:
 
     [

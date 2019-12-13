@@ -1,0 +1,5 @@
+1.
+    query desc : Count Of courses 
+    query : SELECT DISTINCT trainingcourses.Name , COUNT(trainingcourses.Name) FROM trainingcourses GROUP BY trainingcourses.Name
+2.
+    query desc : Count of feedback for each course
